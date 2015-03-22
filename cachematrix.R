@@ -1,7 +1,11 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This script contains two functions makeCacheMatrix() and 
+## cacheSolve() that will take a square matrix as an input and process the
+## corresponding inverse of that matrix.
 
-## Write a short comment describing this function
+## makeCacheMatrix() will accept a square matrix as an input and 
+## create a list that contains the following functions: 
+## set(), get(), setinv() and getinv().
+## This function uses the super assignment operator <<- .
 
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
@@ -18,7 +22,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve() will return the inverse of square matrix x.
+## It checks the environment for any cached iinverse matrix.
+## If the matrix has changed, then it creates a new inverse matrix.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
